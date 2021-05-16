@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  min-height: 50vh;
+  width: 80%;
+}
+
+.container .card {
+  position: relative;
+  height: 350px;
+  width: 600px;
+  min-width: 600px;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container .card .circle {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container .card .circle:hover::before {
+  -webkit-clip-path: circle(400px at center);
+  clip-path: circle(400px at center);
+  background-color: #0065ce;
+}
+
+.container .card .circle::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #d83133;
+  -webkit-clip-path: circle(120px at center);
+  clip-path: circle(120px at center);
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.container .card:hover img {
+  left: 70%;
+  height: 500px;
+}
+
+.container .card:hover .content {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  left: 25%;
+  opacity: 1;
+}
+
+.container .card img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 300px;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  pointer-events: none;
+}
+
+.container .card .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  pointer-events: none;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  color: white;
+  opacity: 0;
+}
+
+.container .card .content h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.container .card .content p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    min-height: 100vh;
+  }
+  .container .card {
+    height: 690px;
+    width: auto;
+    max-width: 350px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .card .circle:hover::before {
+    -webkit-clip-path: circle(800px at center);
+    clip-path: circle(800px at center);
+  }
+  .container .card:hover img {
+    top: 65%;
+    left: 50%;
+    height: 400px;
+  }
+  .container .card:hover .content {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    left: 50%;
+    top: 20%;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
